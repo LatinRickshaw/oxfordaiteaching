@@ -912,6 +912,16 @@ main {
     margin-bottom: var(--spacing-lg);
 }
 
+.course-hero .meta-item {
+    color: var(--color-white);
+    opacity: 0.95;
+}
+
+.course-hero .meta-item .icon {
+    color: var(--color-white);
+    opacity: 0.8;
+}
+
 .pricing-card {
     background-color: var(--color-white);
     color: var(--color-slate);
