@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% if page.title %}{{ page.title }} | {% endif %}{{ site.title }}</title>
+    <meta name="description" content="{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}">
+    <meta name="keywords" content="{{ site.keywords }}">
+
+    <!-- Open Graph / Social Media -->
+    <meta property="og:title" content="{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}">
+    <meta property="og:description" content="{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="{{ site.url }}{{ page.url }}">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="{{ site.baseurl }}/assets/images/favicon.svg">
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="{{ site.baseurl }}/assets/css/main.css">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+
+    {% seo %}
+</head>
+<body>
+    {% include header.html %}
+
+    <main>
+        {{ content }}
+    </main>
+
+    {% include footer.html %}
+
+    <script src="{{ site.baseurl }}/assets/js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,41 @@
+# Site settings
+title: "AI Evening Classes Oxford"
+description: "Professional AI training courses in Oxford. Learn AI foundations, advanced prompting, and agentic workflows in small evening cohorts."
+baseurl: ""
+url: "https://yourusername.github.io"
+
+# SEO
+tagline: "Master AI Skills in Oxford's Premier Evening Classes"
+keywords: "AI courses Oxford, AI training, evening classes Oxford, AI workshops, prompt engineering, agentic AI"
+
+# Contact
+email: info@aieveningclasses.oxford
+location: "Oxford, UK"
+
+# Social (add your handles)
+social:
+  linkedin: ""
+  twitter: ""
+
+# Build settings
+markdown: kramdown
+permalink: pretty
+
+# Collections
+collections:
+  courses:
+    output: true
+    permalink: /courses/:name/
+
+# Exclude from build
+exclude:
+  - README.md
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor
+
+# Plugins
+plugins:
+  - jekyll-seo-tag
+  - jekyll-sitemap

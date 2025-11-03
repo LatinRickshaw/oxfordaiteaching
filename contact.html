@@ -1,0 +1,129 @@
+---
+layout: default
+title: Contact Us
+description: Get in touch with AI Evening Classes Oxford. Questions about courses, corporate training, or custom programs.
+---
+
+<section class="hero">
+    <div class="container">
+        <div class="hero-content">
+            <h1>Get In Touch</h1>
+            <p>Questions about our courses? Want to discuss corporate training? We'd love to hear from you.</p>
+        </div>
+    </div>
+</section>
+
+<section class="section section-accent">
+    <div class="container">
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: var(--spacing-3xl); max-width: 1000px; margin: 0 auto;">
+            <div>
+                <h2>Send Us a Message</h2>
+                <p>Fill out the form and we'll get back to you within 24 hours (usually much faster!).</p>
+
+                <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST" style="margin-top: var(--spacing-xl);">
+                    <div class="form-group">
+                        <label class="form-label" for="name">Name *</label>
+                        <input type="text" id="name" name="name" class="form-input" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="form-label" for="email">Email *</label>
+                        <input type="email" id="email" name="email" class="form-input" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="form-label" for="subject">Subject</label>
+                        <select id="subject" name="subject" class="form-select">
+                            <option>General Inquiry</option>
+                            <option>Course Question</option>
+                            <option>Corporate Training</option>
+                            <option>Group Booking</option>
+                            <option>Technical Support</option>
+                            <option>Feedback</option>
+                            <option>Other</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="form-label" for="message">Message *</label>
+                        <textarea id="message" name="message" class="form-textarea" rows="6" required></textarea>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary btn-large">Send Message</button>
+                </form>
+            </div>
+
+            <div>
+                <h2>Other Ways to Reach Us</h2>
+
+                <div style="background-color: var(--color-white); padding: var(--spacing-xl); border-radius: var(--border-radius-lg); margin-top: var(--spacing-xl); box-shadow: var(--shadow-md);">
+                    <h3 style="display: flex; align-items: center; gap: var(--spacing-sm); color: var(--color-indigo);">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                            <polyline points="22,6 12,13 2,6"></polyline>
+                        </svg>
+                        Email
+                    </h3>
+                    <p><a href="mailto:{{ site.email }}">{{ site.email }}</a></p>
+                    <p style="font-size: 0.9rem; color: var(--color-gray-600); margin-bottom: 0;">We typically respond within 24 hours</p>
+                </div>
+
+                <div style="background-color: var(--color-white); padding: var(--spacing-xl); border-radius: var(--border-radius-lg); margin-top: var(--spacing-md); box-shadow: var(--shadow-md);">
+                    <h3 style="display: flex; align-items: center; gap: var(--spacing-sm); color: var(--color-indigo);">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                            <circle cx="12" cy="10" r="3"></circle>
+                        </svg>
+                        Location
+                    </h3>
+                    <p>{{ site.location }}</p>
+                    <p style="font-size: 0.9rem; color: var(--color-gray-600); margin-bottom: 0;">Classes held at central Oxford venues (confirmed upon booking)</p>
+                </div>
+
+                <div style="background-color: var(--color-white); padding: var(--spacing-xl); border-radius: var(--border-radius-lg); margin-top: var(--spacing-md); box-shadow: var(--shadow-md);">
+                    <h3 style="display: flex; align-items: center; gap: var(--spacing-sm); color: var(--color-indigo);">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
+                        </svg>
+                        Social Media
+                    </h3>
+                    <div style="display: flex; gap: var(--spacing-md); margin-top: var(--spacing-sm);">
+                        {% if site.social.linkedin %}
+                        <a href="{{ site.social.linkedin }}" target="_blank" rel="noopener" style="display: flex; align-items: center; justify-content: center; width: 48px; height: 48px; background-color: var(--color-indigo); color: white; border-radius: 50%; transition: transform var(--transition-fast);" onmouseover="this.style.transform='translateY(-4px)'" onmouseout="this.style.transform='translateY(0)'">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+                            </svg>
+                        </a>
+                        {% endif %}
+                        {% if site.social.twitter %}
+                        <a href="{{ site.social.twitter }}" target="_blank" rel="noopener" style="display: flex; align-items: center; justify-content: center; width: 48px; height: 48px; background-color: var(--color-blue); color: white; border-radius: 50%; transition: transform var(--transition-fast);" onmouseover="this.style.transform='translateY(-4px)'" onmouseout="this.style.transform='translateY(0)'">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+                            </svg>
+                        </a>
+                        {% endif %}
+                    </div>
+                    <p style="font-size: 0.9rem; color: var(--color-gray-600); margin-top: var(--spacing-sm); margin-bottom: 0;">Follow us for AI tips, course updates, and Oxford tech news</p>
+                </div>
+
+                <div style="background-color: var(--color-gray-100); padding: var(--spacing-lg); border-radius: var(--border-radius-lg); margin-top: var(--spacing-xl);">
+                    <h3 style="font-size: 1.125rem;">Quick Links</h3>
+                    <ul style="list-style: none; padding: 0; margin: 0;">
+                        <li style="margin-bottom: var(--spacing-sm);"><a href="{{ site.baseurl }}/schedule.html">View Course Schedule</a></li>
+                        <li style="margin-bottom: var(--spacing-sm);"><a href="{{ site.baseurl }}/faq.html">Frequently Asked Questions</a></li>
+                        <li style="margin-bottom: var(--spacing-sm);"><a href="{{ site.baseurl }}/corporate.html">Corporate Training</a></li>
+                        <li style="margin-bottom: 0;"><a href="{{ site.baseurl }}/about.html">About Us</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <style>
+            @media (max-width: 968px) {
+                section.section .container > div {
+                    grid-template-columns: 1fr !important;
+                }
+            }
+        </style>
+    </div>
+</section>

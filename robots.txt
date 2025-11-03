@@ -1,0 +1,11 @@
+# robots.txt for AI Evening Classes Oxford
+
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://yourusername.github.io/sitemap.xml
+
+# Disallow admin/temp areas (if any)
+Disallow: /admin/
+Disallow: /_drafts/

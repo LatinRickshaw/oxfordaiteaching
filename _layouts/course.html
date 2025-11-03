@@ -1,0 +1,65 @@
+---
+layout: default
+---
+
+<article class="course-page">
+    <section class="course-hero">
+        <div class="container">
+            <div class="course-hero-content">
+                <span class="course-level">{{ page.level }}</span>
+                <h1>{{ page.title }}</h1>
+                <p class="course-tagline">{{ page.tagline }}</p>
+                <div class="course-meta">
+                    <div class="meta-item">
+                        <svg class="icon" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M10 18C14.4183 18 18 14.4183 18 10C18 5.58172 14.4183 2 10 2C5.58172 2 2 5.58172 2 10C2 14.4183 5.58172 18 10 18Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M10 6V10L13 13" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                        <span>4 weeks • 1 evening/week</span>
+                    </div>
+                    <div class="meta-item">
+                        <svg class="icon" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M17 21V19C17 17.9391 16.5786 16.9217 15.8284 16.1716C15.0783 15.4214 14.0609 15 13 15H5C3.93913 15 2.92172 15.4214 2.17157 16.1716C1.42143 16.9217 1 17.9391 1 19V21" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M9 11C11.2091 11 13 9.20914 13 7C13 4.79086 11.2091 3 9 3C6.79086 3 5 4.79086 5 7C5 9.20914 6.79086 11 9 11Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                        <span>Max 12 students</span>
+                    </div>
+                    <div class="meta-item">
+                        <svg class="icon" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M12 2L12 6L16 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M16 18H4C2.89543 18 2 17.1046 2 16V4C2 2.89543 2.89543 2 4 2H12L18 8V16C18 17.1046 17.1046 18 16 18Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                        <span>Certificate included</span>
+                    </div>
+                </div>
+            </div>
+            <div class="course-hero-pricing">
+                <div class="pricing-card">
+                    <div class="price">
+                        <span class="currency">£</span>
+                        <span class="amount">{{ page.price }}</span>
+                    </div>
+                    {% if page.early_bird %}
+                    <p class="early-bird">Early bird: £{{ page.early_bird }} (save £{{ page.price | minus: page.early_bird }})</p>
+                    {% endif %}
+                    <a href="{{ page.booking_link }}" class="btn btn-primary btn-large">Book Your Spot</a>
+                    <p class="guarantee">Full refund if cancelled ≥7 days before start</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="course-content">
+        <div class="container">
+            {{ content }}
+        </div>
+    </section>
+
+    <section class="course-cta">
+        <div class="container">
+            <h2>Ready to Master AI?</h2>
+            <p>Join {{ page.title }} and transform how you work with AI</p>
+            <a href="{{ page.booking_link }}" class="btn btn-primary btn-large">Enrol Now</a>
+        </div>
+    </section>
+</article>

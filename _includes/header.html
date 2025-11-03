@@ -1,0 +1,46 @@
+<header class="site-header">
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-wrapper">
+                <a href="{{ site.baseurl }}/" class="logo">
+                    <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <rect width="40" height="40" rx="8" fill="#283593"/>
+                        <path d="M12 28L20 12L28 28H25L20 18L15 28H12Z" fill="#FFB300"/>
+                        <path d="M17 28H23V25H17V28Z" fill="#1E88E5"/>
+                    </svg>
+                    <span class="logo-text">AI Evening Classes</span>
+                </a>
+
+                <button class="mobile-menu-toggle" aria-label="Toggle menu" aria-expanded="false">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+
+                <ul class="nav-menu">
+                    <li><a href="{{ site.baseurl }}/" {% if page.url == "/" %}class="active"{% endif %}>Home</a></li>
+                    <li class="nav-dropdown">
+                        <a href="{{ site.baseurl }}/courses/" class="{% if page.url contains '/courses/' %}active{% endif %}">
+                            Courses
+                            <svg class="icon-chevron" width="12" height="12" viewBox="0 0 12 12" fill="none">
+                                <path d="M3 4.5L6 7.5L9 4.5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a href="{{ site.baseurl }}/courses/beginners.html">Introduction to AI</a></li>
+                            <li><a href="{{ site.baseurl }}/courses/intermediate.html">Competent AI</a></li>
+                            <li><a href="{{ site.baseurl }}/courses/advanced.html">Advanced AI (Agentic)</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="{{ site.baseurl }}/schedule.html" {% if page.url == "/schedule.html" %}class="active"{% endif %}>Schedule</a></li>
+                    <li><a href="{{ site.baseurl }}/corporate.html" {% if page.url == "/corporate.html" %}class="active"{% endif %}>Corporate</a></li>
+                    <li><a href="{{ site.baseurl }}/about.html" {% if page.url == "/about.html" %}class="active"{% endif %}>About</a></li>
+                    <li><a href="{{ site.baseurl }}/contact.html" {% if page.url == "/contact.html" %}class="active"{% endif %}>Contact</a></li>
+                    <li class="nav-cta">
+                        <a href="{{ site.baseurl }}/schedule.html#book" class="btn btn-primary btn-small">Book Now</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+</header>
