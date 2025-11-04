@@ -746,6 +746,10 @@ main {
     font-weight: 600;
 }
 
+.course-card .btn {
+    white-space: normal;
+}
+
 .price-amount {
     font-size: 2.5rem;
     font-weight: 700;
