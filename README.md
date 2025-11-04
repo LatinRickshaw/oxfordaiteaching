@@ -166,10 +166,13 @@ Add Stripe payment links:
 
 1. Create products in Stripe Dashboard
 2. Generate payment links for each course
-3. Update booking links in:
+3. **Set redirect URL to:** `https://YOUR-USERNAME.github.io/oxfordaiteaching/confirmation`
+4. Update booking links in:
    - Course pages (`courses/*.html`)
    - Schedule page (`schedule.html`)
    - Replace `#stripe-booking-link` with actual Stripe URLs
+
+**See [STRIPE_SETUP.md](STRIPE_SETUP.md) for complete step-by-step instructions.**
 
 ### Add Instructor Bio
 
