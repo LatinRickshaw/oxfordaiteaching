@@ -21,12 +21,6 @@ social:
 markdown: kramdown
 permalink: pretty
 
-# Collections
-collections:
-  courses:
-    output: true
-    permalink: /courses/:name/
-
 # Exclude from build
 exclude:
   - README.md
