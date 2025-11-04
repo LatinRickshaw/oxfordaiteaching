@@ -51,7 +51,7 @@ For each product:
 - ✅ Collect billing address (optional but recommended for invoicing)
 
 **After payment:**
-- **Redirect to URL:** `https://latinrickshaw.github.io/oxfordaiteaching/confirmation`
+- **Redirect to URL:** `https://oxfordaitraining.com/confirmation`
 - This ensures customers see the thank you page after successful payment
 
 **Additional options:**
@@ -65,7 +65,7 @@ For each product:
 Payment Link Name: AI Beginners Course - [Month Year]
 Description: Introduction to AI - 4 Week Evening Course starting [Start Date]
 Price: £149.00
-Success URL: https://latinrickshaw.github.io/oxfordaiteaching/confirmation
+Success URL: https://oxfordaitraining.com/confirmation
 Allow promotion codes: Yes
 Require billing address: Yes (optional)
 ```
