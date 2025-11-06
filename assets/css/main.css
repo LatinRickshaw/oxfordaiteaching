@@ -939,6 +939,28 @@ main {
     }
 }
 
+/* Mobile CTA and Button Styles */
+@media (max-width: 640px) {
+    .cta-section {
+        padding: var(--spacing-xl);
+        margin: var(--spacing-xl) 0;
+    }
+
+    .cta-section h2 {
+        font-size: 1.75rem;
+    }
+
+    .cta-section p {
+        font-size: 1rem;
+    }
+
+    .btn-large {
+        width: 100%;
+        display: block;
+        padding: 0.875rem 1.5rem;
+    }
+}
+
 .course-hero h1 {
     color: var(--color-white);
 }
