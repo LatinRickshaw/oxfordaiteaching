@@ -1,0 +1,10 @@
+<svg width="1200" height="300" viewBox="0 0 1200 300" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Oxford AI Training logo">
+
+<title>Oxford AI Training — Horizontal Monochrome (White)</title>
+<g transform="translate(40,30) scale(6)"><rect width="40" height="40" rx="8" fill="#FFFFFF"/>
+  <path d="M12 28L20 12L28 28H25L20 18L15 28H12Z" fill="#111111"/>
+  <path d="M17 28H23V25H17V28Z" fill="#111111"/></g>
+<text x="320" y="140" font-family="Inter, Poppins, Helvetica, Arial, sans-serif" font-size="120" font-weight="800" fill="#FFFFFF">Oxford</text>
+<text x="320" y="238" font-family="Inter, Poppins, Helvetica, Arial, sans-serif" font-size="100" font-weight="600" fill="#FFFFFF" letter-spacing="1.5">AI Training</text>
+
+</svg>
