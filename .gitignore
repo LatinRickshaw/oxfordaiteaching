@@ -33,3 +33,6 @@ package-lock.json
 # Temporary files
 *.tmp
 *.log
+
+# Screenshots
+screenshots/
