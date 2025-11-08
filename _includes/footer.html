@@ -62,8 +62,18 @@
             <div class="footer-col">
                 <h3>Newsletter</h3>
                 <p>Get updates on new cohorts and AI insights</p>
-                <form class="newsletter-form" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
-                    <input type="email" name="email" placeholder="Your email" required>
+                <form class="newsletter-form" method="post" action="https://emailoctopus.com/lists/YOUR_LIST_ID/members/embedded/add">
+                    <input type="email" name="email_address" id="email_address" placeholder="Your email" required>
+                    <div class="newsletter-consent">
+                        <label>
+                            <input type="checkbox" name="consent" required>
+                            <small>I agree to receive newsletters. See our <a href="{{ site.baseurl }}/privacy">Privacy Policy</a>.</small>
+                        </label>
+                    </div>
+                    <!-- EmailOctopus form fields -->
+                    <div style="position: absolute; left: -5000px;" aria-hidden="true">
+                        <input type="text" name="hpYOUR_LIST_ID" tabindex="-1" value="">
+                    </div>
                     <button type="submit" class="btn btn-secondary">Subscribe</button>
                 </form>
             </div>

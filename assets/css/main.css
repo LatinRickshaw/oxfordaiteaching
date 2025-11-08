@@ -506,12 +506,13 @@ main {
 
 .newsletter-form {
     display: flex;
+    flex-direction: column;
     gap: var(--spacing-sm);
     margin-top: var(--spacing-md);
 }
 
-.newsletter-form input {
-    flex: 1;
+.newsletter-form input[type="email"] {
+    width: 100%;
     padding: var(--spacing-sm);
     border: 1px solid var(--color-gray-600);
     border-radius: var(--border-radius);
@@ -520,12 +521,42 @@ main {
     font-size: 0.875rem;
 }
 
-.newsletter-form input:focus {
+.newsletter-form input[type="email"]:focus {
     outline: none;
     border-color: var(--color-blue);
 }
 
+.newsletter-consent {
+    margin: var(--spacing-xs) 0;
+}
+
+.newsletter-consent label {
+    display: flex;
+    align-items: flex-start;
+    gap: var(--spacing-xs);
+    cursor: pointer;
+    font-size: 0.75rem;
+    color: var(--color-gray-400);
+}
+
+.newsletter-consent input[type="checkbox"] {
+    margin-top: 2px;
+    cursor: pointer;
+    width: auto;
+    flex-shrink: 0;
+}
+
+.newsletter-consent a {
+    color: var(--color-blue);
+    text-decoration: underline;
+}
+
+.newsletter-consent a:hover {
+    color: var(--color-blue-light);
+}
+
 .newsletter-form button {
+    width: 100%;
     flex-shrink: 0;
 }
 
