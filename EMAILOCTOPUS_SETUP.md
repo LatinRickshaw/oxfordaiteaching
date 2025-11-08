@@ -11,11 +11,21 @@ Your website is now configured to use EmailOctopus for newsletter subscriptions.
 
 ## Step 2: Create a Mailing List
 
-1. Once logged in, click "Lists" in the sidebar
-2. Click "Create a new list"
-3. Name your list (e.g., "AI Evening Classes Newsletter")
-4. Add a description (optional)
-5. Click "Create list"
+1. Once logged in, you should see the main dashboard
+2. Look for one of these options:
+   - A button that says **"Create a list"** or **"New list"** (usually in the top-right corner)
+   - If you're on the "Lists" page, look for a **"+"** button or **"Create list"** button
+   - On first login, EmailOctopus may prompt you to create your first list automatically
+3. Click the button to create a new list
+4. Fill in the details:
+   - **List name**: "AI Evening Classes Newsletter" (or your preferred name)
+   - **Description**: Optional (e.g., "Weekly AI insights and course updates for Oxford professionals")
+5. Click **"Create list"** or **"Save"**
+
+**Note**: If you still can't find the button, try:
+- Going directly to the Lists section from the left sidebar/menu
+- Looking for a large **"+"** icon
+- Checking if there's a welcome tutorial that guides you through list creation
 
 ## Step 3: Get Your Form Embed Code
 
