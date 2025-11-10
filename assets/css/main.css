@@ -1053,3 +1053,313 @@ main {
     padding: var(--spacing-3xl) 0;
     text-align: center;
 }
+
+/* ============================================
+   Cookie Consent Modal - GDPR UK Compliant
+   ============================================ */
+
+.cookie-consent-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(15, 23, 42, 0.8);
+    z-index: 9998;
+    opacity: 0;
+    visibility: hidden;
+    transition: all var(--transition-base);
+    backdrop-filter: blur(4px);
+}
+
+.cookie-consent-modal {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: var(--color-white);
+    box-shadow: var(--shadow-xl);
+    z-index: 9999;
+    transform: translateY(100%);
+    transition: transform var(--transition-base);
+    max-height: 90vh;
+    overflow-y: auto;
+}
+
+.cookie-consent-modal.active .cookie-consent-overlay {
+    opacity: 1;
+    visibility: visible;
+}
+
+.cookie-consent-modal.active {
+    transform: translateY(0);
+}
+
+.cookie-consent-content {
+    max-width: var(--container-width);
+    margin: 0 auto;
+    padding: var(--spacing-xl) var(--container-padding);
+}
+
+.cookie-consent-header {
+    display: flex;
+    align-items: flex-start;
+    gap: var(--spacing-md);
+    margin-bottom: var(--spacing-md);
+}
+
+.cookie-icon {
+    width: 48px;
+    height: 48px;
+    background-color: var(--color-indigo);
+    border-radius: var(--border-radius-lg);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    flex-shrink: 0;
+}
+
+.cookie-consent-header h2 {
+    margin: 0;
+    font-size: 1.5rem;
+    color: var(--color-slate);
+}
+
+.cookie-consent-body {
+    margin-bottom: var(--spacing-lg);
+}
+
+.cookie-consent-body p {
+    margin-bottom: var(--spacing-md);
+    color: var(--color-gray-700);
+    line-height: 1.6;
+}
+
+.cookie-consent-body a {
+    color: var(--color-blue);
+    text-decoration: underline;
+}
+
+.cookie-consent-body a:hover {
+    color: var(--color-blue-dark);
+}
+
+.cookie-consent-actions {
+    display: flex;
+    gap: var(--spacing-md);
+    flex-wrap: wrap;
+}
+
+.cookie-consent-actions .btn {
+    flex: 1;
+    min-width: 140px;
+}
+
+.cookie-settings-panel {
+    display: none;
+    margin-top: var(--spacing-lg);
+    padding-top: var(--spacing-lg);
+    border-top: 1px solid var(--color-gray-200);
+}
+
+.cookie-consent-modal.show-settings .cookie-main-content {
+    display: none;
+}
+
+.cookie-consent-modal.show-settings .cookie-settings-panel {
+    display: block;
+}
+
+.cookie-settings-header {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-md);
+    margin-bottom: var(--spacing-lg);
+}
+
+.btn-back {
+    background: none;
+    border: none;
+    color: var(--color-blue);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-xs);
+    font-size: 1rem;
+    font-weight: 600;
+    padding: var(--spacing-xs);
+    transition: color var(--transition-fast);
+}
+
+.btn-back:hover {
+    color: var(--color-blue-dark);
+}
+
+.cookie-settings-header h3 {
+    margin: 0;
+    font-size: 1.25rem;
+}
+
+.cookie-category {
+    background-color: var(--color-gray-50);
+    border-radius: var(--border-radius);
+    padding: var(--spacing-lg);
+    margin-bottom: var(--spacing-md);
+}
+
+.cookie-category-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: var(--spacing-sm);
+}
+
+.cookie-category-info h4 {
+    margin: 0 0 var(--spacing-xs) 0;
+    font-size: 1.125rem;
+    color: var(--color-slate);
+}
+
+.cookie-category-info p {
+    margin: 0;
+    color: var(--color-gray-600);
+    font-size: 0.875rem;
+}
+
+.cookie-toggle-wrapper {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-sm);
+}
+
+.toggle-switch {
+    position: relative;
+    width: 52px;
+    height: 28px;
+    flex-shrink: 0;
+}
+
+.toggle-switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.toggle-slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: var(--color-gray-300);
+    transition: var(--transition-base);
+    border-radius: 28px;
+}
+
+.toggle-slider:before {
+    position: absolute;
+    content: "";
+    height: 20px;
+    width: 20px;
+    left: 4px;
+    bottom: 4px;
+    background-color: var(--color-white);
+    transition: var(--transition-base);
+    border-radius: 50%;
+}
+
+.toggle-switch input:checked + .toggle-slider {
+    background-color: var(--color-success);
+}
+
+.toggle-switch input:checked + .toggle-slider:before {
+    transform: translateX(24px);
+}
+
+.toggle-switch input:disabled + .toggle-slider {
+    opacity: 0.5;
+    cursor: not-allowed;
+    background-color: var(--color-gray-400);
+}
+
+.toggle-label {
+    font-size: 0.875rem;
+    font-weight: 600;
+    color: var(--color-gray-700);
+}
+
+.cookie-always-on {
+    font-size: 0.875rem;
+    color: var(--color-gray-500);
+    font-weight: 600;
+}
+
+.cookie-settings-actions {
+    display: flex;
+    gap: var(--spacing-md);
+    margin-top: var(--spacing-xl);
+}
+
+.cookie-settings-actions .btn {
+    flex: 1;
+}
+
+/* Mobile responsive styles */
+@media (max-width: 640px) {
+    .cookie-consent-content {
+        padding: var(--spacing-lg) var(--spacing-md);
+    }
+
+    .cookie-consent-header {
+        flex-direction: column;
+        text-align: center;
+        align-items: center;
+    }
+
+    .cookie-consent-header h2 {
+        font-size: 1.25rem;
+    }
+
+    .cookie-consent-actions {
+        flex-direction: column;
+    }
+
+    .cookie-consent-actions .btn {
+        width: 100%;
+    }
+
+    .cookie-category {
+        padding: var(--spacing-md);
+    }
+
+    .cookie-category-header {
+        flex-direction: column;
+        gap: var(--spacing-md);
+    }
+
+    .cookie-toggle-wrapper {
+        width: 100%;
+        justify-content: space-between;
+    }
+
+    .cookie-settings-actions {
+        flex-direction: column;
+    }
+
+    .cookie-settings-actions .btn {
+        width: 100%;
+    }
+}
+
+@media (min-width: 768px) {
+    .cookie-consent-modal {
+        bottom: var(--spacing-lg);
+        left: var(--spacing-lg);
+        right: var(--spacing-lg);
+        border-radius: var(--border-radius-lg);
+        max-width: 800px;
+        margin: 0 auto;
+    }
+}

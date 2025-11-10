@@ -35,6 +35,138 @@
 
     {% include footer.html %}
 
+    <!-- Cookie Consent Modal - GDPR UK Compliant -->
+    <div class="cookie-consent-overlay"></div>
+    <div class="cookie-consent-modal" id="cookieConsentModal">
+        <div class="cookie-consent-content">
+
+            <!-- Main Content (Initial View) -->
+            <div class="cookie-main-content">
+                <div class="cookie-consent-header">
+                    <div class="cookie-icon">🍪</div>
+                    <div>
+                        <h2>We Value Your Privacy</h2>
+                    </div>
+                </div>
+
+                <div class="cookie-consent-body">
+                    <p>
+                        We use cookies to enhance your browsing experience, analyze site traffic, and personalize content.
+                        By clicking "Accept All", you consent to our use of cookies. You can manage your preferences or reject non-essential cookies by clicking "Manage Preferences".
+                    </p>
+                    <p>
+                        <a href="{{ site.baseurl }}/privacy.html">Privacy Policy</a> |
+                        <a href="{{ site.baseurl }}/privacy.html#cookies">Cookie Policy</a>
+                    </p>
+                </div>
+
+                <div class="cookie-consent-actions">
+                    <button class="btn btn-outline" id="rejectAllCookies">Reject All</button>
+                    <button class="btn btn-secondary" id="manageCookiePreferences">Manage Preferences</button>
+                    <button class="btn btn-primary" id="acceptAllCookies">Accept All</button>
+                </div>
+            </div>
+
+            <!-- Settings Panel -->
+            <div class="cookie-settings-panel">
+                <div class="cookie-settings-header">
+                    <button class="btn-back" id="backFromSettings">
+                        <svg width="20" height="20" viewBox="0 0 20 20" fill="currentColor">
+                            <path fill-rule="evenodd" d="M12.707 5.293a1 1 0 010 1.414L9.414 10l3.293 3.293a1 1 0 01-1.414 1.414l-4-4a1 1 0 010-1.414l4-4a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                        </svg>
+                        Back
+                    </button>
+                    <h3>Cookie Preferences</h3>
+                </div>
+
+                <p style="margin-bottom: 1.5rem; color: var(--color-gray-600);">
+                    Manage your cookie preferences below. You can enable or disable different types of cookies based on your preferences.
+                    Please note that disabling some types of cookies may impact your experience on our website.
+                </p>
+
+                <!-- Necessary Cookies (Always On) -->
+                <div class="cookie-category">
+                    <div class="cookie-category-header">
+                        <div class="cookie-category-info">
+                            <h4>Strictly Necessary Cookies</h4>
+                            <p>
+                                These cookies are essential for the website to function properly. They enable core functionality such as
+                                security, network management, and accessibility. You cannot opt-out of these cookies.
+                            </p>
+                        </div>
+                        <div class="cookie-toggle-wrapper">
+                            <span class="cookie-always-on">Always On</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Analytics Cookies -->
+                <div class="cookie-category">
+                    <div class="cookie-category-header">
+                        <div class="cookie-category-info">
+                            <h4>Analytics Cookies</h4>
+                            <p>
+                                These cookies help us understand how visitors interact with our website by collecting and reporting
+                                information anonymously. This helps us improve the user experience.
+                            </p>
+                        </div>
+                        <div class="cookie-toggle-wrapper">
+                            <label class="toggle-switch">
+                                <input type="checkbox" id="cookie-analytics">
+                                <span class="toggle-slider"></span>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Marketing Cookies -->
+                <div class="cookie-category">
+                    <div class="cookie-category-header">
+                        <div class="cookie-category-info">
+                            <h4>Marketing Cookies</h4>
+                            <p>
+                                These cookies are used to track visitors across websites. The intention is to display ads that are
+                                relevant and engaging for individual users and thereby more valuable for publishers and third-party advertisers.
+                            </p>
+                        </div>
+                        <div class="cookie-toggle-wrapper">
+                            <label class="toggle-switch">
+                                <input type="checkbox" id="cookie-marketing">
+                                <span class="toggle-slider"></span>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Preference Cookies -->
+                <div class="cookie-category">
+                    <div class="cookie-category-header">
+                        <div class="cookie-category-info">
+                            <h4>Preference Cookies</h4>
+                            <p>
+                                These cookies enable the website to remember choices you make (such as your user name, language, or
+                                the region you are in) and provide enhanced, more personal features.
+                            </p>
+                        </div>
+                        <div class="cookie-toggle-wrapper">
+                            <label class="toggle-switch">
+                                <input type="checkbox" id="cookie-preferences">
+                                <span class="toggle-slider"></span>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="cookie-settings-actions">
+                    <button class="btn btn-outline" id="rejectAllFromSettings">Reject All</button>
+                    <button class="btn btn-primary" id="saveCookiePreferences">Save Preferences</button>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
     <script src="{{ site.baseurl }}/assets/js/main.js"></script>
+    <script src="{{ site.baseurl }}/assets/js/cookie-consent.js"></script>
 </body>
 </html>
