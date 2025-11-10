@@ -560,6 +560,15 @@ main {
     flex-shrink: 0;
 }
 
+/* EmailOctopus Embedded Form Styles */
+.footer-col label[for="consent"] {
+    display: block;
+    margin-top: var(--spacing-sm);
+    font-size: 0.75rem;
+    color: var(--color-gray-300);
+    line-height: 1.5;
+}
+
 .footer-bottom {
     border-top: 1px solid var(--color-gray-700);
     padding-top: var(--spacing-lg);
