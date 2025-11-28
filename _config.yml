@@ -15,7 +15,7 @@ location: "Oxford, UK"
 # Social (add your handles)
 social:
   linkedin: "https://www.linkedin.com/company/oxfordaitraining"
-  twitter: ""
+  twitter: "https://x.com/ai_oxford_study"
 
 # Build settings
 markdown: kramdown
