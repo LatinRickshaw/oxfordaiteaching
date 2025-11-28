@@ -10,7 +10,7 @@ AI Evening Classes Oxford delivers practical, hands-on AI training in three prog
 - **Competent AI (Intermediate)** - £179
 - **Advanced AI (Agentic)** - £229
 
-All courses run for 4 weeks, one evening per week (18:45-20:15) in Oxford.
+All courses run for 4 weeks, one evening per week (18:30-19:30) in Oxford.
 
 ## 🚀 Quick Start
 

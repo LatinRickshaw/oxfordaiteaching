@@ -15,7 +15,7 @@ A local, face‑to‑face evening training venture delivering three AI courses t
 2. **Competent AI (Intermediate)** – _prompt like a pro_, tools, workflows.
 3. **Advanced AI (Agentic/MCPs)** – data‑driven/agentic patterns, small projects.
 
-**Format:** 4‑week cohort courses, 1 evening per week, **1‑hour class** with **15 min setup/cleanup** (book **18:45–20:15**).
+**Format:** 4‑week cohort courses, 1 evening per week, **1‑hour class** (**18:30–19:30**).
 **Cohort size:** target **10**, max 12.
 **Pricing (per student, per 4‑week course):** Beginners **£149**, Intermediate **£179**, Advanced **£229**.
 **Year‑1 revenue (base‑case):** **£40,716**; Operating profit before owner pay **£24,483**; after owner pay **£16,083** (pre‑tax).
@@ -58,7 +58,7 @@ A local, face‑to‑face evening training venture delivering three AI courses t
 
 ## 4) Operations
 
-- **Venue:** Board Room @ HBC (to be confirmed). Request **Wi‑Fi**, tables, chairs, projector/large display. Booking **18:45–20:15**.
+- **Venue:** Board Room @ HBC (to be confirmed). Request **Wi‑Fi**, tables, chairs, projector/large display. Booking **18:30–19:30**.
 - **Policies (proposed):**
 
   - **Cancellation:** full refund ≥ **7 days** pre‑start; 50% within 3–6 days; no refund < **72 hours** (transfer allowed if waitlist).
