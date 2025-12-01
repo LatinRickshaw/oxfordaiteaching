@@ -9,7 +9,7 @@
   time: "18:30-19:30"
   spots_available: 12
   spots_total: 12
-  booking_link: "https://book.stripe.com/PREVIEW_LINK_TBD"
+  booking_link: "https://book.stripe.com/7sY3cvc6s1eh6MC3cS8bS04"
   status: open
   discount_code: "PREVIEW100"
   requires_review_commitment: true
