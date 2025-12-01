@@ -1,0 +1,55 @@
+# January 2026 Cohorts
+- course_id: beginners
+  cohort_number: 1
+  month: January 2026
+  year: 2026
+  dates: "Tuesdays, 6, 13, 20 & 27 January"
+  start_date: 2026-01-06
+  day_of_week: Tuesday
+  time: "18:30-19:30"
+  spots_available: 12
+  spots_total: 12
+  booking_link: "https://book.stripe.com/14AaEX6M8bSVdb028O8bS00"
+  status: open
+
+# February 2026 Cohorts
+# NEW: Second cohort for Introduction to AI!
+- course_id: beginners
+  cohort_number: 2
+  month: February 2026
+  year: 2026
+  dates: "Tuesdays, 3, 10, 17 & 24 February"
+  start_date: 2026-02-03
+  day_of_week: Tuesday
+  time: "18:30-19:30"
+  spots_available: 12
+  spots_total: 12
+  booking_link: "https://book.stripe.com/eVq3cv4E0f577QG7t88bS03"
+  status: open
+
+- course_id: intermediate
+  cohort_number: 1
+  month: February 2026
+  year: 2026
+  dates: "Wednesdays, 3, 10, 17 & 24 February"
+  start_date: 2026-02-03
+  day_of_week: Wednesday
+  time: "18:30-19:30"
+  spots_available: 12
+  spots_total: 12
+  booking_link: "https://book.stripe.com/28EfZhdaw6yB2wm6p48bS01"
+  status: open
+
+# March 2026 Cohorts
+- course_id: advanced
+  cohort_number: 1
+  month: March 2026
+  year: 2026
+  dates: "Thursdays, 3, 10, 17 & 24 March"
+  start_date: 2026-03-03
+  day_of_week: Thursday
+  time: "18:30-19:30"
+  spots_available: 12
+  spots_total: 12
+  booking_link: "https://book.stripe.com/5kQ7sLdaw8GJgncbJo8bS02"
+  status: open

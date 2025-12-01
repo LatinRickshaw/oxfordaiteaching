@@ -19,74 +19,49 @@ description: View upcoming AI course cohorts in Oxford and book your spot. Begin
             <h2 id="book">Book Your Course</h2>
             <p>All courses run for 4 weeks, one evening per week (18:30-19:30) in Oxford. Maximum 12 students per cohort.</p>
 
-            <!-- January 2026 - Beginners -->
-            <div style="background-color: var(--color-white); padding: var(--spacing-xl); border-radius: var(--border-radius-lg); margin-bottom: var(--spacing-xl); box-shadow: var(--shadow-md);">
-                <h3 style="color: var(--color-indigo); margin-bottom: var(--spacing-sm);">January 2026</h3>
+            {% assign cohorts_by_month = site.data.cohorts | where: "status", "open" | group_by: "month" %}
 
-                <div style="border-left: 3px solid var(--color-indigo); padding-left: var(--spacing-md); margin-bottom: var(--spacing-lg);">
-                    <div style="display: flex; justify-content: space-between; align-items: start; flex-wrap: wrap; margin-bottom: var(--spacing-sm);">
-                        <div>
-                            <h4 style="margin-bottom: 0.25rem;">Introduction to AI (Beginners)</h4>
-                            <p style="color: var(--color-gray-600); margin-bottom: var(--spacing-xs); font-size: 0.9rem;">Cohort #1</p>
+            {% for month_group in cohorts_by_month %}
+                <div style="background-color: var(--color-white); padding: var(--spacing-xl); border-radius: var(--border-radius-lg); margin-bottom: var(--spacing-xl); box-shadow: var(--shadow-md);">
+                    <h3 style="margin-bottom: var(--spacing-sm);">{{ month_group.name }}</h3>
+
+                    {% for cohort in month_group.items %}
+                        {% assign course = site.data.courses | where: "id", cohort.course_id | first %}
+
+                        <div id="{{ cohort.course_id }}" style="border-left: 3px solid var(--color-{{ course.color }}); padding-left: var(--spacing-md); margin-bottom: var(--spacing-lg);">
+                            <div style="display: flex; justify-content: space-between; align-items: start; flex-wrap: wrap; margin-bottom: var(--spacing-sm);">
+                                <div>
+                                    <h4 style="margin-bottom: 0.25rem;">{{ course.title }}</h4>
+                                    <p style="color: var(--color-gray-600); margin-bottom: var(--spacing-xs); font-size: 0.9rem;">
+                                        Cohort #{{ cohort.cohort_number }}
+                                    </p>
+                                </div>
+                                <div style="text-align: right;">
+                                    <div style="font-size: 1.5rem; font-weight: 700; color: var(--color-slate);">£{{ course.price }}</div>
+                                    <div style="font-size: 0.875rem; color: var(--color-success);">Early bird: £{{ course.early_bird }}</div>
+                                </div>
+                            </div>
+
+                            <p>
+                                <strong>Dates:</strong> {{ cohort.dates }}<br>
+                                <strong>Time:</strong> {{ cohort.time }}<br>
+                                <strong>Spots available:</strong>
+                                <span style="color: {% if cohort.spots_available > 0 %}var(--color-success){% else %}var(--color-error){% endif %}; font-weight: 600;">
+                                    {{ cohort.spots_available }} / {{ cohort.spots_total }}
+                                </span>
+                            </p>
+
+                            {% if cohort.spots_available > 0 %}
+                                <a href="{{ cohort.booking_link }}" class="btn btn-primary">Book Now</a>
+                            {% else %}
+                                <button class="btn btn-outline" disabled>Fully Booked</button>
+                            {% endif %}
+
+                            <a href="{{ site.baseurl }}/courses/{{ cohort.course_id }}" class="btn btn-outline">Course Details</a>
                         </div>
-                        <div style="text-align: right;">
-                            <div style="font-size: 1.5rem; font-weight: 700; color: var(--color-slate);">£149</div>
-                            <div style="font-size: 0.875rem; color: var(--color-success);">Early bird: £129</div>
-                        </div>
-                    </div>
-                    <p><strong>Dates:</strong> Mondays, 6, 13, 20 & 27 January<br>
-                    <strong>Time:</strong> 18:30-19:30<br>
-                    <strong>Spots available:</strong> <span style="color: var(--color-success); font-weight: 600;">12 / 12</span></p>
-                    <a href="https://book.stripe.com/test_14A9AU0cQePf1g62Kr3VC00" class="btn btn-primary">Book Now</a>
-                    <a href="{{ site.baseurl }}/courses/beginners" class="btn btn-outline">Course Details</a>
+                    {% endfor %}
                 </div>
-            </div>
-
-            <!-- February 2026 - Intermediate -->
-            <div style="background-color: var(--color-white); padding: var(--spacing-xl); border-radius: var(--border-radius-lg); margin-bottom: var(--spacing-xl); box-shadow: var(--shadow-md);">
-                <h3 style="color: var(--color-blue); margin-bottom: var(--spacing-sm);">February 2026</h3>
-
-                <div style="border-left: 3px solid var(--color-blue); padding-left: var(--spacing-md);">
-                    <div style="display: flex; justify-content: space-between; align-items: start; flex-wrap: wrap; margin-bottom: var(--spacing-sm);">
-                        <div>
-                            <h4 style="margin-bottom: 0.25rem;">Competent AI (Intermediate)</h4>
-                            <p style="color: var(--color-gray-600); margin-bottom: var(--spacing-xs); font-size: 0.9rem;">Cohort #1</p>
-                        </div>
-                        <div style="text-align: right;">
-                            <div style="font-size: 1.5rem; font-weight: 700; color: var(--color-slate);">£179</div>
-                            <div style="font-size: 0.875rem; color: var(--color-success);">Early bird: £159</div>
-                        </div>
-                    </div>
-                    <p><strong>Dates:</strong> Mondays, 3, 10, 17 & 24 February<br>
-                    <strong>Time:</strong> 18:30-19:30<br>
-                    <strong>Spots available:</strong> <span style="color: var(--color-success); font-weight: 600;">12 / 12</span></p>
-                    <a href="https://book.stripe.com/test_28E28sgbO6iJaQG98P3VC01" class="btn btn-secondary">Book Now</a>
-                    <a href="{{ site.baseurl }}/courses/intermediate" class="btn btn-outline">Course Details</a>
-                </div>
-            </div>
-
-            <!-- March 2026 - Advanced -->
-            <div style="background-color: var(--color-white); padding: var(--spacing-xl); border-radius: var(--border-radius-lg); margin-bottom: var(--spacing-xl); box-shadow: var(--shadow-md);">
-                <h3 style="color: var(--color-amber); margin-bottom: var(--spacing-sm);">March 2026</h3>
-
-                <div style="border-left: 3px solid var(--color-amber); padding-left: var(--spacing-md);">
-                    <div style="display: flex; justify-content: space-between; align-items: start; flex-wrap: wrap; margin-bottom: var(--spacing-sm);">
-                        <div>
-                            <h4 style="margin-bottom: 0.25rem;">Advanced AI (Agentic)</h4>
-                            <p style="color: var(--color-gray-600); margin-bottom: var(--spacing-xs); font-size: 0.9rem;">Cohort #1</p>
-                        </div>
-                        <div style="text-align: right;">
-                            <div style="font-size: 1.5rem; font-weight: 700; color: var(--color-slate);">£229</div>
-                            <div style="font-size: 0.875rem; color: var(--color-success);">Early bird: £209</div>
-                        </div>
-                    </div>
-                    <p><strong>Dates:</strong> Mondays, 3, 10, 17 & 24 March<br>
-                    <strong>Time:</strong> 18:30-19:30<br>
-                    <strong>Spots available:</strong> <span style="color: var(--color-success); font-weight: 600;">12 / 12</span></p>
-                    <a href="https://book.stripe.com/test_00w3cw4t6ePf7Eu2Kr3VC02" class="btn btn-outline" style="border-color: var(--color-amber); color: var(--color-amber);">Book Now</a>
-                    <a href="{{ site.baseurl }}/courses/advanced" class="btn btn-outline">Course Details</a>
-                </div>
-            </div>
+            {% endfor %}
 
             <div style="background-color: var(--color-gray-100); padding: var(--spacing-xl); border-radius: var(--border-radius-lg); margin-top: var(--spacing-2xl);">
                 <h3>Multi-Course Packages</h3>

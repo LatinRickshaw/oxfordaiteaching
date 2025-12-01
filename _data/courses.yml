@@ -1,0 +1,47 @@
+- id: beginners
+  title: Introduction to AI
+  level: Beginners
+  tagline: Build confidence with AI fundamentals and learn to use AI safely and effectively in your daily work
+  description: Perfect for newcomers to AI. Learn the foundations, safety principles, and practical everyday applications.
+  price: 149
+  early_bird: 129
+  color: indigo
+  duration: 4 weeks
+  max_students: 12
+  highlights:
+    - AI fundamentals & how LLMs work
+    - Effective prompting techniques
+    - Practical everyday applications
+    - Safety & ethical considerations
+
+- id: intermediate
+  title: Competent AI (Intermediate)
+  level: Intermediate
+  tagline: Master advanced prompting techniques, build multi-step workflows, and integrate AI into your professional toolkit
+  description: For those with AI basics who want to prompt like a pro and build sophisticated workflows.
+  price: 179
+  early_bird: 159
+  color: blue
+  duration: 4 weeks
+  max_students: 12
+  highlights:
+    - Advanced prompting strategies
+    - Multimodal AI (text, image, code)
+    - Structured data workflows
+    - Integration with existing tools
+
+- id: advanced
+  title: Advanced AI (Agentic)
+  level: Advanced
+  tagline: Build AI agents, master data-driven workflows, and create sophisticated agentic systems with MCPs
+  description: For experienced practitioners ready to build autonomous agents and data-driven AI systems.
+  price: 229
+  early_bird: 209
+  color: amber
+  duration: 4 weeks
+  max_students: 12
+  highlights:
+    - Building autonomous AI agents
+    - Function calling & tool use
+    - Data analysis & visualization
+    - Production deployment strategies

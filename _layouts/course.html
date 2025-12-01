@@ -2,13 +2,16 @@
 layout: default
 ---
 
+{% assign course = site.data.courses | where: "id", page.course_id | first %}
+{% assign course_cohorts = site.data.cohorts | where: "course_id", page.course_id | where: "status", "open" | sort: "start_date" %}
+
 <article class="course-page">
     <section class="course-hero">
         <div class="container">
             <div class="course-hero-content">
-                <span class="course-level">{{ page.level }}</span>
-                <h1>{{ page.title }}</h1>
-                <p class="course-tagline">{{ page.tagline }}</p>
+                <span class="course-level">{{ course.level }}</span>
+                <h1>{{ course.title }}</h1>
+                <p class="course-tagline">{{ course.tagline }}</p>
                 <div class="course-meta">
                     <div class="meta-item">
                         <svg class="icon" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -37,12 +40,32 @@ layout: default
                 <div class="pricing-card">
                     <div class="price">
                         <span class="currency">£</span>
-                        <span class="amount">{{ page.price }}</span>
+                        <span class="amount">{{ course.price }}</span>
                     </div>
-                    {% if page.early_bird %}
-                    <p class="early-bird">Early bird: £{{ page.early_bird }} (save £{{ page.price | minus: page.early_bird }})</p>
+                    {% if course.early_bird %}
+                    <p class="early-bird">Early bird: £{{ course.early_bird }} (save £{{ course.price | minus: course.early_bird }})</p>
                     {% endif %}
-                    <a href="{{ page.booking_link }}" class="btn btn-primary btn-large">Book Your Spot</a>
+
+                    {% if course_cohorts.size > 0 %}
+                        {% if course_cohorts.size == 1 %}
+                            <a href="{{ course_cohorts[0].booking_link }}" class="btn btn-primary btn-large">Book Your Spot - {{ course_cohorts[0].month }}</a>
+                        {% else %}
+                            <p style="margin: 1rem 0 0.5rem; font-weight: 600;">Available cohorts:</p>
+                            {% for cohort in course_cohorts limit: 3 %}
+                            <a href="{{ cohort.booking_link }}" class="btn btn-primary btn-large" style="margin-bottom: 0.5rem;">
+                                {{ cohort.month }} - {{ cohort.day_of_week }}s
+                            </a>
+                            {% endfor %}
+                            {% if course_cohorts.size > 3 %}
+                            <a href="{{ site.baseurl }}/schedule#{{ page.course_id }}" class="btn btn-outline" style="margin-top: 0.5rem;">
+                                View All {{ course_cohorts.size }} Cohorts
+                            </a>
+                            {% endif %}
+                        {% endif %}
+                    {% else %}
+                        <a href="{{ site.baseurl }}/schedule#waitlist" class="btn btn-outline btn-large">Join Waitlist</a>
+                    {% endif %}
+
                     <p class="guarantee">Full refund if cancelled ≥7 days before start</p>
                 </div>
             </div>
@@ -58,8 +81,16 @@ layout: default
     <section class="course-cta">
         <div class="container">
             <h2>Ready to Master AI?</h2>
-            <p>Join {{ page.title }} and transform how you work with AI</p>
-            <a href="{{ page.booking_link }}" class="btn btn-primary btn-large">Enrol Now</a>
+            <p>Join {{ course.title }} and transform how you work with AI</p>
+            {% if course_cohorts.size > 0 %}
+                {% if course_cohorts.size == 1 %}
+                    <a href="{{ course_cohorts[0].booking_link }}" class="btn btn-primary btn-large">Enrol Now</a>
+                {% else %}
+                    <a href="{{ site.baseurl }}/schedule#{{ page.course_id }}" class="btn btn-primary btn-large">View Dates & Enrol</a>
+                {% endif %}
+            {% else %}
+                <a href="{{ site.baseurl }}/schedule#waitlist" class="btn btn-outline btn-large">Join Waitlist</a>
+            {% endif %}
         </div>
     </section>
 </article>
