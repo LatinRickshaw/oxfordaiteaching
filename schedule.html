@@ -16,7 +16,44 @@ description: View upcoming AI course cohorts in Oxford and book your spot. Begin
 <section class="section section-accent">
     <div class="container">
         <div style="max-width: 900px; margin: 0 auto;">
-            <h2 id="book">Book Your Course</h2>
+            {% assign events = site.data.cohorts | where_exp: "item", "item.requires_review_commitment == true" %}
+            {% if events.size > 0 %}
+            <div style="background: linear-gradient(135deg, #f3e5f5 0%, #e1bee7 100%); padding: 2rem; border-radius: var(--border-radius-lg); margin-bottom: 3rem;">
+                <h3 style="margin-bottom: 1.5rem; display: flex; align-items: center; gap: 0.5rem;">
+                    <span style="font-size: 1.5rem;">🌟</span> Special Events
+                </h3>
+
+                {% for event_cohort in events %}
+                    {% assign event = site.data.courses | where: "id", event_cohort.course_id | first %}
+
+                    <div style="background: white; padding: 2rem; border-radius: var(--border-radius-lg); border-left: 6px solid #9C27B0;">
+                        <div style="display: flex; justify-content: space-between; align-items: start; margin-bottom: 1rem; flex-wrap: wrap; gap: 1rem;">
+                            <div>
+                                <span style="background: #9C27B0; color: white; padding: 0.25rem 0.75rem; border-radius: 2rem; font-size: 0.75rem; font-weight: 600; text-transform: uppercase;">{{ event.level }}</span>
+                                <h4 style="margin: 0.5rem 0;">{{ event.title }}</h4>
+                            </div>
+                            <div style="text-align: right;">
+                                <div style="font-size: 0.875rem; color: var(--color-gray-500); text-decoration: line-through;">Value: £{{ event.original_price }}</div>
+                                <div style="font-size: 1.5rem; font-weight: 700; color: #9C27B0;">FREE</div>
+                                <div style="font-size: 0.875rem; color: var(--color-gray-600); font-family: monospace;">Code: {{ event_cohort.discount_code }}</div>
+                            </div>
+                        </div>
+
+                        <p style="margin-bottom: 1rem;">{{ event.tagline }}</p>
+
+                        <div style="display: flex; gap: 2rem; margin: 1rem 0; padding: 1rem 0; border-top: 1px solid var(--color-gray-200); border-bottom: 1px solid var(--color-gray-200); font-size: 0.9rem; flex-wrap: wrap;">
+                            <span><strong>Date:</strong> {{ event_cohort.dates }}</span>
+                            <span><strong>Time:</strong> {{ event_cohort.time }}</span>
+                            <span><strong>Spots:</strong> <span style="color: var(--color-success); font-weight: 600;">{{ event_cohort.spots_available }}/{{ event_cohort.spots_total }}</span></span>
+                        </div>
+
+                        <a href="{{ site.baseurl }}/preview-night" class="btn btn-primary" style="background: linear-gradient(135deg, #9C27B0 0%, #7B1FA2 100%);">Learn More & Book Free Spot</a>
+                    </div>
+                {% endfor %}
+            </div>
+            {% endif %}
+
+            <h2 id="book">Regular 4-Week Courses</h2>
             <p>All courses run for 4 weeks, one evening per week (18:30-19:30) in Oxford. Maximum 12 students per cohort.</p>
 
             {% assign cohorts_by_month = site.data.cohorts | where: "status", "open" | group_by: "month" %}

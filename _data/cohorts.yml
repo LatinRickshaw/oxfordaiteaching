@@ -1,3 +1,19 @@
+# December 2025 Preview Night
+- course_id: preview-night
+  cohort_number: 1
+  month: December 2025
+  year: 2025
+  dates: "Thursday, 11 December"
+  start_date: 2025-12-11
+  day_of_week: Thursday
+  time: "18:30-19:30"
+  spots_available: 12
+  spots_total: 12
+  booking_link: "https://book.stripe.com/PREVIEW_LINK_TBD"
+  status: open
+  discount_code: "PREVIEW100"
+  requires_review_commitment: true
+
 # January 2026 Cohorts
 - course_id: beginners
   cohort_number: 1
