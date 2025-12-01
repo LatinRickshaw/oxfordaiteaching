@@ -21,8 +21,8 @@ This guide explains how to set up Stripe payment links for your courses and conf
   - Early Bird: £129.00 GBP (optional - for promotional pricing)
 - **Image:** Upload course image (optional)
 
-### Product 2: Competent AI (Intermediate)
-- **Name:** Competent AI - 4 Week Evening Course
+### Product 2: Intermediate AI
+- **Name:** Intermediate AI - 4 Week Evening Course
 - **Description:** Master advanced prompting and workflows. 4 weeks, one evening per week in Oxford.
 - **Pricing:**
   - Standard: £179.00 GBP (one-time payment)

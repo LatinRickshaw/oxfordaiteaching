@@ -18,7 +18,7 @@ Successfully transformed the Oxford AI Teaching site from hardcoded course and c
 - Currently includes 4 cohorts:
   - **Introduction to AI (Beginners)** - January 2026 (Tuesdays)
   - **Introduction to AI (Beginners)** - February 2026 (Mondays) ⭐ NEW!
-  - **Competent AI (Intermediate)** - February 2026 (Wednesdays)
+  - **Intermediate AI** - February 2026 (Wednesdays)
   - **Advanced AI (Agentic)** - March 2026 (Thursdays)
 
 ### 2. Templates Updated ✅

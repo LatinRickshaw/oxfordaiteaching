@@ -127,7 +127,7 @@ To add a February cohort for "Introduction to AI":
 │ Dates: Mondays, 2, 9, 16 & 23 February │
 │ [Book Now] [Course Details]             │
 │                                         │
-│ Competent AI (Intermediate)             │
+│ Intermediate AI                         │
 │ Cohort #1                               │
 │ Dates: Wednesdays, 3, 10, 17 & 24 Feb  │
 │ [Book Now] [Course Details]             │

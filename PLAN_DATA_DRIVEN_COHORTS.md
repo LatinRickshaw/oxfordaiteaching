@@ -23,7 +23,7 @@ This file will contain static course information (curriculum, pricing, descripti
   max_students: 12
 
 - id: intermediate
-  title: Competent AI (Intermediate)
+  title: Intermediate AI
   level: Intermediate
   tagline: Master advanced prompting techniques, build multi-step workflows, and integrate AI into your professional toolkit
   description: For those with AI basics who want to prompt like a pro and build sophisticated workflows.

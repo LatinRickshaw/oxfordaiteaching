@@ -12,7 +12,7 @@
 A local, face‑to‑face evening training venture delivering three AI courses to adult learners and professionals in Oxford:
 
 1. **Introduction to AI (Beginners)** – foundations, safety, everyday use.
-2. **Competent AI (Intermediate)** – _prompt like a pro_, tools, workflows.
+2. **Intermediate AI** – _prompt like a pro_, tools, workflows.
 3. **Advanced AI (Agentic/MCPs)** – data‑driven/agentic patterns, small projects.
 
 **Format:** 4‑week cohort courses, 1 evening per week, **1‑hour class** (**18:30–19:30**).
