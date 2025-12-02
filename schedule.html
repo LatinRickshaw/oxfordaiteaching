@@ -44,7 +44,6 @@ description: View upcoming AI course cohorts in Oxford and book your spot. Begin
                         <div style="display: flex; gap: 2rem; margin: 1rem 0; padding: 1rem 0; border-top: 1px solid var(--color-gray-200); border-bottom: 1px solid var(--color-gray-200); font-size: 0.9rem; flex-wrap: wrap;">
                             <span><strong>Date:</strong> {{ event_cohort.dates }}</span>
                             <span><strong>Time:</strong> {{ event_cohort.time }}</span>
-                            <span><strong>Spots:</strong> <span style="color: var(--color-success); font-weight: 600;">{{ event_cohort.spots_available }}/{{ event_cohort.spots_total }}</span></span>
                         </div>
 
                         <a href="{{ site.baseurl }}/preview-night" class="btn btn-primary" style="background: linear-gradient(135deg, #9C27B0 0%, #7B1FA2 100%);">Learn More & Book Free Spot</a>
@@ -81,11 +80,7 @@ description: View upcoming AI course cohorts in Oxford and book your spot. Begin
 
                             <p>
                                 <strong>Dates:</strong> {{ cohort.dates }}<br>
-                                <strong>Time:</strong> {{ cohort.time }}<br>
-                                <strong>Spots available:</strong>
-                                <span style="color: {% if cohort.spots_available > 0 %}var(--color-success){% else %}var(--color-error){% endif %}; font-weight: 600;">
-                                    {{ cohort.spots_available }} / {{ cohort.spots_total }}
-                                </span>
+                                <strong>Time:</strong> {{ cohort.time }}
                             </p>
 
                             {% if cohort.spots_available > 0 %}
