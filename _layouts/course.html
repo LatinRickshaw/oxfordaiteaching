@@ -48,7 +48,7 @@ layout: default
 
                     {% if course_cohorts.size > 0 %}
                         {% if course_cohorts.size == 1 %}
-                            <a href="{{ course_cohorts[0].booking_link }}" class="btn btn-primary btn-large">Book Your Spot - {{ course_cohorts[0].month }}</a>
+                            <a href="{{ course_cohorts[0].booking_link }}" class="btn btn-primary btn-large">Book Your Spot<br><span style="font-size: 0.9em; margin-top: 0.25rem; display: inline-block;">{{ course_cohorts[0].month }}</span></a>
                         {% else %}
                             <p style="margin: 1rem 0 0.5rem; font-weight: 600;">Available cohorts:</p>
                             {% for cohort in course_cohorts limit: 3 %}
