@@ -29,6 +29,11 @@ Desktop.ini
 # Node (if you add npm later)
 node_modules/
 package-lock.json
+.env
+.env.local
+
+# Netlify
+.netlify/
 
 # Temporary files
 *.tmp
