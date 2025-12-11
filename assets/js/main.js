@@ -300,44 +300,6 @@
     });
 
     // ========================================
-    // Dismissible Preview Event Banner
-    // ========================================
-
-    window.dismissBanner = function() {
-        const banner = document.getElementById('previewBanner');
-        if (banner) {
-            banner.style.animation = 'slideUp 0.3s ease-out';
-            setTimeout(() => banner.remove(), 300);
-            localStorage.setItem('previewBannerDismissed', 'true');
-        }
-    };
-
-    // Check if banner was previously dismissed
-    const previewBanner = document.getElementById('previewBanner');
-    if (previewBanner && localStorage.getItem('previewBannerDismissed') === 'true') {
-        previewBanner.remove();
-    }
-
-    // Add slideUp animation if not already defined in CSS
-    if (previewBanner && !document.querySelector('style[data-preview-animations]')) {
-        const style = document.createElement('style');
-        style.setAttribute('data-preview-animations', 'true');
-        style.textContent = `
-            @keyframes slideUp {
-                from {
-                    transform: translateY(0);
-                    opacity: 1;
-                }
-                to {
-                    transform: translateY(-100%);
-                    opacity: 0;
-                }
-            }
-        `;
-        document.head.appendChild(style);
-    }
-
-    // ========================================
     // Print Debug Info (Development Only)
     // ========================================
 
@@ -345,7 +307,6 @@
         console.log('AI Evening Classes Oxford - Site loaded');
         console.log('Mobile menu:', mobileMenuToggle ? 'Found' : 'Not found');
         console.log('Forms found:', forms.length);
-        console.log('Preview banner:', previewBanner ? 'Found' : 'Not found');
     }
 
 })();

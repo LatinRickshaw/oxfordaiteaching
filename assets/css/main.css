@@ -1383,26 +1383,6 @@ main {
    Preview Night / Special Events Styling
    ============================================ */
 
-/* Event banner (dismissible top banner) */
-.event-banner {
-    animation: slideDown 0.3s ease-out;
-}
-
-@keyframes slideDown {
-    from {
-        transform: translateY(-100%);
-        opacity: 0;
-    }
-    to {
-        transform: translateY(0);
-        opacity: 1;
-    }
-}
-
-.banner-close:hover {
-    opacity: 1 !important;
-}
-
 /* Homepage preview event hero section */
 .hero-preview-event {
     background: linear-gradient(135deg, #9C27B0 0%, #7B1FA2 100%);
@@ -1611,19 +1591,10 @@ main {
         text-align: center;
     }
 
-    .event-banner .container {
-        padding: 0 1rem;
-    }
-
-    .banner-close {
-        position: static !important;
-        margin-left: auto;
-    }
 }
 
 /* Print styles - hide event banners */
 @media print {
-    .event-banner,
     .hero-preview-event {
         display: none;
     }
