@@ -130,11 +130,20 @@ description: Get in touch with AI Evening Classes Oxford. Questions about course
 </section>
 <script>
   var form = document.getElementById("contact-form");
-  
+
   async function handleSubmit(event) {
     event.preventDefault();
     var status = document.getElementById("contact-form-status");
+    var submitButton = event.target.querySelector('button[type="submit"]');
+    var originalButtonText = submitButton.textContent;
     var data = new FormData(event.target);
+
+    // Disable button and show loading state
+    submitButton.disabled = true;
+    submitButton.textContent = "Sending...";
+    submitButton.style.opacity = "0.6";
+    submitButton.style.cursor = "not-allowed";
+
     fetch(event.target.action, {
       method: form.method,
       body: data,
@@ -144,7 +153,9 @@ description: Get in touch with AI Evening Classes Oxford. Questions about course
     }).then(response => {
       if (response.ok) {
         status.innerHTML = "Thanks for your submission!";
+        status.style.color = "var(--color-green)";
         form.reset()
+        // Keep button disabled on success
       } else {
         response.json().then(data => {
           if (Object.hasOwn(data, 'errors')) {
@@ -152,10 +163,22 @@ description: Get in touch with AI Evening Classes Oxford. Questions about course
           } else {
             status.innerHTML = "Oops! There was a problem submitting your form"
           }
+          status.style.color = "var(--color-red)";
+          // Re-enable button on error
+          submitButton.disabled = false;
+          submitButton.textContent = originalButtonText;
+          submitButton.style.opacity = "1";
+          submitButton.style.cursor = "pointer";
         })
       }
     }).catch(error => {
       status.innerHTML = "Oops! There was a problem submitting your form"
+      status.style.color = "var(--color-red)";
+      // Re-enable button on error
+      submitButton.disabled = false;
+      submitButton.textContent = originalButtonText;
+      submitButton.style.opacity = "1";
+      submitButton.style.cursor = "pointer";
     });
   }
   form.addEventListener("submit", handleSubmit)

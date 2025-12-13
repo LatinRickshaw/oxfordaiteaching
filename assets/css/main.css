@@ -416,6 +416,22 @@ main {
     font-size: 1.125rem;
 }
 
+.btn:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+    pointer-events: none;
+}
+
+.btn-primary:disabled {
+    background-color: var(--color-indigo);
+    border-color: var(--color-indigo);
+}
+
+.btn-primary:disabled:hover {
+    transform: none;
+    box-shadow: none;
+}
+
 /* ============================================
    Footer
    ============================================ */
