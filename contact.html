@@ -153,9 +153,12 @@ description: Get in touch with AI Evening Classes Oxford. Questions about course
     }).then(response => {
       if (response.ok) {
         status.innerHTML = "Thanks for your submission!";
-        status.style.color = "var(--color-green)";
-        form.reset()
-        // Keep button disabled on success
+        status.style.color = "var(--color-success)";
+        form.reset();
+        // Update button to show success
+        submitButton.textContent = "Sent!";
+        submitButton.style.backgroundColor = "var(--color-success)";
+        submitButton.style.borderColor = "var(--color-success)";
       } else {
         response.json().then(data => {
           if (Object.hasOwn(data, 'errors')) {
@@ -163,7 +166,7 @@ description: Get in touch with AI Evening Classes Oxford. Questions about course
           } else {
             status.innerHTML = "Oops! There was a problem submitting your form"
           }
-          status.style.color = "var(--color-red)";
+          status.style.color = "var(--color-error)";
           // Re-enable button on error
           submitButton.disabled = false;
           submitButton.textContent = originalButtonText;
