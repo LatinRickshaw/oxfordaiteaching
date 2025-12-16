@@ -53,7 +53,7 @@ description: View upcoming AI course cohorts in Oxford and book your spot. Begin
             {% endif %}
 
             <h2 id="book">Regular 4-Week Courses</h2>
-            <p>All courses run for 4 weeks, one evening per week (18:30-19:30) in Oxford. Maximum 12 students per cohort.</p>
+            <p>All courses run for 4 weeks, one evening per week (18:30-19:30) at <strong>{{ site.venue_short }}</strong>. Maximum 12 students per cohort.</p>
 
             {% assign cohorts_by_month = site.data.cohorts | where: "status", "open" | group_by: "month" %}
 

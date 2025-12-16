@@ -12,6 +12,12 @@ keywords: "AI courses Oxford, AI training, evening classes Oxford, AI workshops,
 email: hello@oxfordaitraining.com
 location: "Oxford, UK"
 
+# Venue
+venue_name: "Methodist Hall"
+venue_address: "30 New High Street, Headington, Oxford OX3 7AQ"
+venue_short: "Methodist Hall, Headington, Oxford"
+venue_city: "Headington, Oxford"
+
 # Social (add your handles)
 social:
   linkedin: "https://www.linkedin.com/company/oxfordaitraining"
