@@ -1,16 +1,16 @@
 # January 2026 Cohorts
-- course_id: beginners
-  cohort_number: 1
-  month: January 2026
-  year: 2026
-  dates: "Tuesdays, 6, 13, 20 & 27 January"
-  start_date: 2026-01-06
-  day_of_week: Tuesday
-  time: "18:30-19:30"
-  spots_available: 12
-  spots_total: 12
-  booking_link: "https://book.stripe.com/14AaEX6M8bSVdb028O8bS00"
-  status: open
+# - course_id: beginners
+#   cohort_number: 1
+#   month: January 2026
+#   year: 2026
+#   dates: "Tuesdays, 6, 13, 20 & 27 January"
+#   start_date: 2026-01-06
+#   day_of_week: Tuesday
+#   time: "18:30-19:30"
+#   spots_available: 12
+#   spots_total: 12
+#   booking_link: "https://book.stripe.com/14AaEX6M8bSVdb028O8bS00"
+#   status: open
 
 # February 2026 Cohorts
 - course_id: beginners

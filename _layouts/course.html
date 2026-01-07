@@ -53,7 +53,7 @@ layout: default
                             <p style="margin: 1rem 0 0.5rem; font-weight: 600;">Available cohorts:</p>
                             {% for cohort in course_cohorts limit: 3 %}
                             <a href="{{ cohort.booking_link }}" class="btn btn-primary btn-large" style="margin-bottom: 0.5rem;">
-                                {{ cohort.month }} - {{ cohort.day_of_week }}s
+                                Book {{ cohort.month }} - {{ cohort.day_of_week }}s
                             </a>
                             {% endfor %}
                             {% if course_cohorts.size > 3 %}
