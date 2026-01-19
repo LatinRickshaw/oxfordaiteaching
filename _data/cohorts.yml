@@ -53,6 +53,19 @@
   booking_link: "https://book.stripe.com/28E14nb2o6yB9YOcNs8bS07"
   status: open
 
+- course_id: intermediate
+  cohort_number: 1
+  month: March 2026
+  year: 2026
+  dates: "Wednesdays, 4, 11, 18 & 25 March"
+  start_date: 2026-03-04
+  day_of_week: Wednesday
+  time: "18:30-19:30"
+  spots_available: 12
+  spots_total: 12
+  booking_link: " https://book.stripe.com/6oU9AT4E07CF1sicNs8bS08"
+  status: open
+
 - course_id: advanced
   cohort_number: 1
   month: March 2026
