@@ -51,11 +51,13 @@ layout: default
                             <a href="{{ course_cohorts[0].booking_link }}" class="btn btn-primary btn-large">Book Your Spot<br><span style="font-size: 0.9em; margin-top: 0.25rem; display: inline-block;">{{ course_cohorts[0].month }}</span></a>
                         {% else %}
                             <p style="margin: 1rem 0 0.5rem; font-weight: 600;">Available cohorts:</p>
-                            {% for cohort in course_cohorts limit: 3 %}
-                            <a href="{{ cohort.booking_link }}" class="btn btn-primary btn-large" style="margin-bottom: 0.5rem;">
-                                Book {{ cohort.month }} - {{ cohort.day_of_week }}s
-                            </a>
-                            {% endfor %}
+                            <div class="booking-buttons">
+                                {% for cohort in course_cohorts limit: 3 %}
+                                <a href="{{ cohort.booking_link }}" class="btn btn-primary btn-large">
+                                    Book {{ cohort.month }} - {{ cohort.day_of_week }}s
+                                </a>
+                                {% endfor %}
+                            </div>
                             {% if course_cohorts.size > 3 %}
                             <a href="{{ site.baseurl }}/schedule#{{ page.course_id }}" class="btn btn-outline" style="margin-top: 0.5rem;">
                                 View All {{ course_cohorts.size }} Cohorts

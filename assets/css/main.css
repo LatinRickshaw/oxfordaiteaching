@@ -1073,6 +1073,21 @@ main {
     margin-bottom: 0;
 }
 
+.pricing-card .booking-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    width: 100%;
+    margin-top: 0.5rem;
+}
+
+.pricing-card .booking-buttons .btn {
+    width: 100%;
+    display: block;
+    white-space: normal;
+    line-height: 1.4;
+}
+
 .course-content {
     padding: var(--spacing-3xl) 0;
     max-width: 800px;
