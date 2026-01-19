@@ -73,16 +73,21 @@ description: View upcoming AI course cohorts in Oxford and book your spot. Begin
                                     </p>
                                 </div>
                                 <div style="text-align: right;">
-                                    <div style="font-size: 1.5rem; font-weight: 700; color: var(--color-slate);">
-                                        {% if cohort.discount_code and cohort.show_discount_badge %}
+                                    {% if cohort.discount_code and cohort.show_discount_badge %}
+                                        <div style="font-size: 1.5rem; font-weight: 700; color: var(--color-slate);">
                                             <span class="original-price">£{{ course.price }}</span>
+                                        </div>
+                                        <div class="discount-code-display" style="margin-top: 0.5rem; max-width: 200px; margin-left: auto;">
+                                            <span class="discount-label">Use code:</span>
                                             <span class="discount-badge">{{ cohort.discount_code }}</span>
-                                        {% else %}
+                                        </div>
+                                    {% else %}
+                                        <div style="font-size: 1.5rem; font-weight: 700; color: var(--color-slate);">
                                             £{{ course.price }}
-                                        {% endif %}
-                                    </div>
+                                        </div>
+                                    {% endif %}
                                     {% if course.early_bird %}
-                                        <div style="font-size: 0.875rem; color: var(--color-success);">Early bird: £{{ course.early_bird }}</div>
+                                        <div style="font-size: 0.875rem; color: var(--color-success); margin-top: 0.5rem;">Early bird: £{{ course.early_bird }}</div>
                                     {% endif %}
                                 </div>
                             </div>
