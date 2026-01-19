@@ -1076,16 +1076,15 @@ main {
 .pricing-card .booking-buttons {
     display: flex;
     flex-direction: column;
+    align-items: center;
     gap: 0.5rem;
-    width: 100%;
     margin-top: 0.5rem;
 }
 
 .pricing-card .booking-buttons .btn {
-    width: 100%;
-    display: block;
     white-space: normal;
     line-height: 1.4;
+    min-width: 280px;
 }
 
 .course-content {
