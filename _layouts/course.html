@@ -38,24 +38,48 @@ layout: default
             </div>
             <div class="course-hero-pricing">
                 <div class="pricing-card">
-                    <div class="price">
-                        <span class="currency">£</span>
-                        <span class="amount">{{ course.price }}</span>
-                    </div>
+                    {% assign first_cohort = course_cohorts[0] %}
+                    {% if first_cohort.discount_code and first_cohort.show_discount_badge %}
+                        <div class="price-with-discount">
+                            <div class="price original">
+                                <span class="currency">£</span>
+                                <span class="amount">{{ course.price }}</span>
+                            </div>
+                            <div class="discount-code-display">
+                                <span class="discount-label">Use code:</span>
+                                <span class="discount-badge">{{ first_cohort.discount_code }}</span>
+                            </div>
+                        </div>
+                    {% else %}
+                        <div class="price">
+                            <span class="currency">£</span>
+                            <span class="amount">{{ course.price }}</span>
+                        </div>
+                    {% endif %}
                     {% if course.early_bird %}
                     <p class="early-bird">Early bird: £{{ course.early_bird }} (save £{{ course.price | minus: course.early_bird }})</p>
                     {% endif %}
 
                     {% if course_cohorts.size > 0 %}
                         {% if course_cohorts.size == 1 %}
-                            <a href="{{ course_cohorts[0].booking_link }}" class="btn btn-primary btn-large">Book Your Spot<br><span style="font-size: 0.9em; margin-top: 0.25rem; display: inline-block;">{{ course_cohorts[0].month }}</span></a>
+                            {% if first_cohort.discount_code %}
+                                <a href="{{ course_cohorts[0].booking_link }}?prefilled_promo_code={{ first_cohort.discount_code }}" class="btn btn-primary btn-large">Book Your Spot<br><span style="font-size: 0.9em; margin-top: 0.25rem; display: inline-block;">{{ course_cohorts[0].month }}</span></a>
+                            {% else %}
+                                <a href="{{ course_cohorts[0].booking_link }}" class="btn btn-primary btn-large">Book Your Spot<br><span style="font-size: 0.9em; margin-top: 0.25rem; display: inline-block;">{{ course_cohorts[0].month }}</span></a>
+                            {% endif %}
                         {% else %}
                             <p style="margin: 1rem 0 0.5rem; font-weight: 600;">Available cohorts:</p>
                             <div class="booking-buttons">
                                 {% for cohort in course_cohorts limit: 3 %}
-                                <a href="{{ cohort.booking_link }}" class="btn btn-primary btn-large">
-                                    Book {{ cohort.month }} - {{ cohort.day_of_week }}s
-                                </a>
+                                {% if cohort.discount_code %}
+                                    <a href="{{ cohort.booking_link }}?prefilled_promo_code={{ cohort.discount_code }}" class="btn btn-primary btn-large">
+                                        Book {{ cohort.month }} - {{ cohort.day_of_week }}s
+                                    </a>
+                                {% else %}
+                                    <a href="{{ cohort.booking_link }}" class="btn btn-primary btn-large">
+                                        Book {{ cohort.month }} - {{ cohort.day_of_week }}s
+                                    </a>
+                                {% endif %}
                                 {% endfor %}
                             </div>
                             {% if course_cohorts.size > 3 %}
@@ -86,7 +110,11 @@ layout: default
             <p>Join {{ course.title }} and transform how you work with AI</p>
             {% if course_cohorts.size > 0 %}
                 {% if course_cohorts.size == 1 %}
-                    <a href="{{ course_cohorts[0].booking_link }}" class="btn btn-primary btn-large">Enrol Now</a>
+                    {% if first_cohort.discount_code %}
+                        <a href="{{ course_cohorts[0].booking_link }}?prefilled_promo_code={{ first_cohort.discount_code }}" class="btn btn-primary btn-large">Enrol Now</a>
+                    {% else %}
+                        <a href="{{ course_cohorts[0].booking_link }}" class="btn btn-primary btn-large">Enrol Now</a>
+                    {% endif %}
                 {% else %}
                     <a href="{{ site.baseurl }}/schedule#{{ page.course_id }}" class="btn btn-primary btn-large">View Dates & Enrol</a>
                 {% endif %}

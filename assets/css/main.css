@@ -1087,6 +1087,83 @@ main {
     min-width: 280px;
 }
 
+/* ============================================
+   Discount Code Badges
+   ============================================ */
+
+/* Discount code badge - primary style */
+.discount-badge {
+    display: inline-block;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    padding: 0.375rem 0.75rem;
+    border-radius: 0.375rem;
+    font-family: 'Monaco', 'Courier New', monospace;
+    font-size: 0.875rem;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    margin-left: 0.5rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    vertical-align: middle;
+}
+
+/* Smaller badge for compact spaces */
+.discount-badge-small {
+    display: inline-block;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    padding: 0.25rem 0.5rem;
+    border-radius: 0.25rem;
+    font-family: 'Monaco', 'Courier New', monospace;
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    margin-left: 0.5rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Original price strikethrough */
+.original-price,
+.price.original .amount {
+    text-decoration: line-through;
+    opacity: 0.6;
+}
+
+/* Discount code display in pricing card */
+.discount-code-display {
+    margin-top: 1rem;
+    padding: 1rem;
+    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+    border-radius: 0.5rem;
+    text-align: center;
+}
+
+.discount-label {
+    display: block;
+    font-size: 0.875rem;
+    color: #64748b;
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+}
+
+.price-with-discount {
+    position: relative;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .discount-badge {
+        display: block;
+        margin-left: 0;
+        margin-top: 0.5rem;
+    }
+
+    .discount-badge-small {
+        font-size: 0.7rem;
+        padding: 0.2rem 0.4rem;
+    }
+}
+
 .course-content {
     padding: var(--spacing-3xl) 0;
     max-width: 800px;

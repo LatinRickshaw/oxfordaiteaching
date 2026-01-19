@@ -73,8 +73,17 @@ description: View upcoming AI course cohorts in Oxford and book your spot. Begin
                                     </p>
                                 </div>
                                 <div style="text-align: right;">
-                                    <div style="font-size: 1.5rem; font-weight: 700; color: var(--color-slate);">£{{ course.price }}</div>
-                                    <div style="font-size: 0.875rem; color: var(--color-success);">Early bird: £{{ course.early_bird }}</div>
+                                    <div style="font-size: 1.5rem; font-weight: 700; color: var(--color-slate);">
+                                        {% if cohort.discount_code and cohort.show_discount_badge %}
+                                            <span class="original-price">£{{ course.price }}</span>
+                                            <span class="discount-badge">{{ cohort.discount_code }}</span>
+                                        {% else %}
+                                            £{{ course.price }}
+                                        {% endif %}
+                                    </div>
+                                    {% if course.early_bird %}
+                                        <div style="font-size: 0.875rem; color: var(--color-success);">Early bird: £{{ course.early_bird }}</div>
+                                    {% endif %}
                                 </div>
                             </div>
 
@@ -84,7 +93,11 @@ description: View upcoming AI course cohorts in Oxford and book your spot. Begin
                             </p>
 
                             {% if cohort.spots_available > 0 %}
-                                <a href="{{ cohort.booking_link }}" class="btn btn-primary">Book Now</a>
+                                {% if cohort.discount_code %}
+                                    <a href="{{ cohort.booking_link }}?prefilled_promo_code={{ cohort.discount_code }}" class="btn btn-primary">Book Now</a>
+                                {% else %}
+                                    <a href="{{ cohort.booking_link }}" class="btn btn-primary">Book Now</a>
+                                {% endif %}
                             {% else %}
                                 <button class="btn btn-outline" disabled>Fully Booked</button>
                             {% endif %}

@@ -49,17 +49,30 @@ description: Three progressive AI training courses - from foundations to agentic
                     </ul>
 
                     <div class="course-price">
-                        <span class="price-amount">£{{ course.price }}</span>
-                        <span class="price-note">Early bird: £{{ course.early_bird }}</span>
+                        {% if next_cohort.discount_code and next_cohort.show_discount_badge %}
+                            <span class="price-amount original">£{{ course.price }}</span>
+                            <span class="discount-badge-small">{{ next_cohort.discount_code }}</span>
+                        {% else %}
+                            <span class="price-amount">£{{ course.price }}</span>
+                        {% endif %}
+                        {% if course.early_bird %}
+                            <span class="price-note">Early bird: £{{ course.early_bird }}</span>
+                        {% endif %}
                     </div>
 
                     <div style="display: flex; flex-direction: column; gap: var(--spacing-sm); margin-top: var(--spacing-lg);">
                         <a href="{{ site.baseurl }}/courses/{{ course.id }}" class="btn btn-primary">View Course</a>
 
                         {% if next_cohort %}
-                            <a href="{{ next_cohort.booking_link }}" class="btn btn-outline">
-                                Book Now - {{ next_cohort.month }}
-                            </a>
+                            {% if next_cohort.discount_code %}
+                                <a href="{{ next_cohort.booking_link }}?prefilled_promo_code={{ next_cohort.discount_code }}" class="btn btn-outline">
+                                    Book Now - {{ next_cohort.month }}
+                                </a>
+                            {% else %}
+                                <a href="{{ next_cohort.booking_link }}" class="btn btn-outline">
+                                    Book Now - {{ next_cohort.month }}
+                                </a>
+                            {% endif %}
                         {% else %}
                             <a href="{{ site.baseurl }}/schedule#waitlist" class="btn btn-outline">
                                 Join Waitlist
