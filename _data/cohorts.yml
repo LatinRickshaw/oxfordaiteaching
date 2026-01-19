@@ -40,6 +40,19 @@
   status: open
 
 # March 2026 Cohorts
+- course_id: beginners_march
+  cohort_number: 3
+  month: March 2026
+  year: 2026
+  dates: "Tuesdays, 10, 17, 24, 31 February"
+  start_date: 2026-03-10
+  day_of_week: Tuesday
+  time: "18:30-19:30"
+  spots_available: 12
+  spots_total: 12
+  booking_link: "https://book.stripe.com/28E14nb2o6yB9YOcNs8bS07"
+  status: open
+
 - course_id: advanced
   cohort_number: 1
   month: March 2026
