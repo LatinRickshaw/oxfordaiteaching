@@ -103,7 +103,7 @@
   booking_link: "https://book.stripe.com/5kQ4gzdawaOR7QG28O8bS0a"
   discount_code: "EARLY20"
   show_discount_badge: true
-  status: closed
+  status: open
 
 - course_id: intermediate
   cohort_number: 4
