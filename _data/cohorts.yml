@@ -91,7 +91,7 @@
 
 # April cohorts
 - course_id: beginners
-  cohort_number: 3
+  cohort_number: 4
   month: April 2026
   year: 2026
   dates: "Tuesdays, 7, 14, 21, 28 March"
@@ -100,41 +100,25 @@
   time: "18:30-19:30"
   spots_available: 12
   spots_total: 12
-  booking_link: "https://book.stripe.com/28E14nb2o6yB9YOcNs8bS07"
+  booking_link: "https://book.stripe.com/5kQ4gzdawaOR7QG28O8bS0a"
   discount_code: "EARLY20"
   show_discount_badge: true
   status: closed
 
 - course_id: intermediate
-  cohort_number: 2
-  month: March 2026
+  cohort_number: 4
+  month: April 2026
   year: 2026
-  dates: "Wednesdays, 4, 11, 18 & 25 March"
-  start_date: 2026-03-04
+  dates: "Wednesdays, 8, 15, 22 & 29 March"
+  start_date: 2026-04-08
   day_of_week: Wednesday
   time: "18:30-19:30"
   spots_available: 12
   spots_total: 12
-  booking_link: " https://book.stripe.com/6oU9AT4E07CF1sicNs8bS08"
+  booking_link: "https://book.stripe.com/3cIeVd0nK9KNef47t88bS09"
   discount_code: "EARLY20"
   show_discount_badge: true
-  status: closed
-
-- course_id: advanced
-  cohort_number: 1
-  month: March 2026
-  year: 2026
-  dates: "Thursdays, 5, 12, 19 & 26 March"
-  start_date: 2026-03-05
-  day_of_week: Thursday
-  time: "18:30-19:30"
-  spots_available: 12
-  spots_total: 12
-  booking_link: "https://book.stripe.com/5kQ7sLdaw8GJgncbJo8bS02"
-  discount_code: "EARLY20"
-  show_discount_badge: true
-  status: closed
-
+  status: open
 
 # May Cohorts
 - course_id: beginners
