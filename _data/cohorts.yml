@@ -103,7 +103,7 @@
   booking_link: "https://book.stripe.com/28E14nb2o6yB9YOcNs8bS07"
   discount_code: "EARLY20"
   show_discount_badge: true
-  status: open
+  status: closed
 
 - course_id: intermediate
   cohort_number: 2
@@ -118,7 +118,7 @@
   booking_link: " https://book.stripe.com/6oU9AT4E07CF1sicNs8bS08"
   discount_code: "EARLY20"
   show_discount_badge: true
-  status: open
+  status: closed
 
 - course_id: advanced
   cohort_number: 1
@@ -133,7 +133,7 @@
   booking_link: "https://book.stripe.com/5kQ7sLdaw8GJgncbJo8bS02"
   discount_code: "EARLY20"
   show_discount_badge: true
-  status: open
+  status: closed
 
 
 # May Cohorts
@@ -150,7 +150,7 @@
   booking_link: "https://book.stripe.com/28E14nb2o6yB9YOcNs8bS07"
   discount_code: "EARLY20"
   show_discount_badge: true
-  status: open
+  status: closed
 
 - course_id: intermediate
   cohort_number: 2
@@ -165,7 +165,7 @@
   booking_link: " https://book.stripe.com/6oU9AT4E07CF1sicNs8bS08"
   discount_code: "EARLY20"
   show_discount_badge: true
-  status: open
+  status: closed
 
 - course_id: advanced
   cohort_number: 1
@@ -180,4 +180,4 @@
   booking_link: "https://book.stripe.com/5kQ7sLdaw8GJgncbJo8bS02"
   discount_code: "EARLY20"
   show_discount_badge: true
-  status: open
+  status: closed
