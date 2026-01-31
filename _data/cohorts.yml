@@ -94,7 +94,7 @@
   cohort_number: 4
   month: April 2026
   year: 2026
-  dates: "Tuesdays, 7, 14, 21, 28 March"
+  dates: "Tuesdays, 7, 14, 21, 28 April"
   start_date: 2026-04-07
   day_of_week: Tuesday
   time: "18:30-19:30"
@@ -109,7 +109,7 @@
   cohort_number: 4
   month: April 2026
   year: 2026
-  dates: "Wednesdays, 8, 15, 22 & 29 March"
+  dates: "Wednesdays, 8, 15, 22 & 29 April"
   start_date: 2026-04-08
   day_of_week: Wednesday
   time: "18:30-19:30"
