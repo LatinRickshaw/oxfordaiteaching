@@ -53,7 +53,7 @@ description: View upcoming AI course cohorts in Oxford and book your spot. Begin
             {% endif %}
 
             <h2 id="book">Regular 4-Week Courses</h2>
-            <p>All courses run for 4 weeks, one evening per week (18:30-19:30) at <strong>{{ site.venue_short }}</strong>. Maximum 12 students per cohort.</p>
+            <p>All courses run for 4 weeks, one evening per week (19:30-21:30) at <strong>{{ site.venue_short }}</strong>. Maximum 12 students per cohort.</p>
 
             {% assign cohorts_by_month = site.data.cohorts | where: "status", "open" | group_by: "month" %}
 
@@ -117,8 +117,8 @@ description: View upcoming AI course cohorts in Oxford and book your spot. Begin
                 <h3>Multi-Course Packages</h3>
                 <p>Save money by booking multiple courses:</p>
                 <ul>
-                    <li><strong>2-Course Pass:</strong> 10% discount (e.g., Beginners + Intermediate: £295 instead of £328)</li>
-                    <li><strong>3-Course Journey:</strong> 15% discount (Complete pathway: £470 instead of £557)</li>
+                    <li><strong>2-Course Pass:</strong> 10% discount (e.g., Beginners + Intermediate: £475 instead of £528)</li>
+                    <li><strong>3-Course Journey:</strong> 15% discount (Complete pathway: £728 instead of £857)</li>
                     <li><strong>Buddy Discount:</strong> Additional 10% off when booking with a colleague</li>
                 </ul>
                 <p><a href="{{ site.baseurl }}/contact">Contact us</a> to arrange multi-course or group bookings.</p>
